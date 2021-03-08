@@ -1,3 +1,3 @@
 using Test
 
-@test greet() == nothing
+@test greet() === nothing
