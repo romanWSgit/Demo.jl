@@ -1,4 +1,8 @@
 using Test
 using Demo
 
-@test greeting() == nothing
+
+@testset "SBFEM.jl" begin
+    # Test for hamiltonian matrix
+    @test greeting() == nothing
+end
