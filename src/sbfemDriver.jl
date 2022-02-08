@@ -3,6 +3,10 @@ Main Sbfem functionality
 =#
 using LinearAlgebra
 
+mutable struct Sbfem_Superelement
+    poly_ord::Int
+    elements::Matrix
+end
 
 
 @doc raw"""
@@ -34,7 +38,7 @@ function shape_mat(η::Float64, poly_ord::Int)::Matrix
 end
 
 @doc raw"""
-    isHamiltonian(matrix, [error]) -> Bool
+    rhat_vec(ξ, η, poly_ord ,coord_vec, [scaling_centre]) -> Vector
 
 Checks if the `matrix` is a hamiltonian matix.
 
